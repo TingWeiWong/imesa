@@ -10,6 +10,6 @@ include_directories(${GTSAM_INCLUDE_DIR})
 message(STATUS "================  iMESA  ======================")
 # Build the iMESA library
 file(GLOB_RECURSE imesa_srcs "*.cpp" "*.h")
-add_library(imesa ${imesa_srcs})
+add_library(imesa STATIC ${imesa_srcs})
 target_link_libraries(imesa gtsam)
 target_include_directories(imesa PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
